@@ -1,0 +1,122 @@
+/* Estilos Básicos do Menu */
+
+.menu-navegacao{
+    width: 100vw;
+    min-height: 8em;
+    background-color: black;
+    color: white;
+    font-family: "Roboto", "sans serif";
+    font-size: 16px;
+    line-height: 28px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+@media(max-width: 1000px){
+    .menu-navegacao{
+        font-size: 12px;
+        line-height: 20px;       
+    }
+}
+
+.menu-navegacao > *{
+    width: 100%;
+    display: grid;
+    gap: .5em;
+}
+
+
+/* menu-navegacao ul */
+
+.menu-navegacao ul{
+    grid-template-columns: 1fr 2fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+@media(max-width: 1200px){
+    .menu-navegacao ul{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media(max-width: 800px){
+    .menu-navegacao ul{
+        width: 80%;
+        grid-template-columns: repeat(auto-fit, 100%);  
+    }
+}
+
+.menu-navegacao ul li{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    margin-top: 2em;
+    
+}
+
+.menu-navegacao ul li h1{
+    width: 100%;
+    font-size: 240%;
+}
+
+.menu-navegacao ul li h2{
+    width: 100%;
+    color: var(--primary-color);
+    font-size: 100%;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.menu-navegacao ul li input{
+    width: 95%;
+    padding: .8em;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+@media(max-width: 1000px){
+    .menu-navegacao ul li input{
+        font-size: 10px;      
+    }
+}
+
+@media(max-width: 800px){
+    .menu-navegacao ul li input{
+        width: 80%;
+    }
+}
+
+.menu-navegacao ul li a{
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    margin: auto;
+    
+}
+
+.menu-navegacao ul li a i{
+    margin-right: .2em;
+}
+
+
+/* menu-navegacao .copyright-span */
+
+.menu-navegacao div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-navegacao div .copyright-span{
+    width: 100%;
+    text-align: center;
+    margin-top: 2em;
+}

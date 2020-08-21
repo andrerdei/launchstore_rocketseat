@@ -1,0 +1,77 @@
+/* Variáveis de Cor */
+
+:root{
+    --primary-color: #fd951f;
+}
+
+
+/* Estilos Básicos do Corpo */
+
+body{
+    width: 100vw;
+    height: 100vh;
+    color: black;
+    font-family: "Roboto", "sans serif";
+    font-size: 16px;
+    line-height: 28px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+body h1{
+    font-size: 240%;
+    font-weight: bold;
+    margin: .3em;
+}
+
+body h2{
+    font-size: 180%;
+    font-weight: bold;
+    margin: .2em;
+}
+
+body h3{
+    font-size: 130%;
+    font-weight: bold;
+}
+
+body ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+body a{
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    -khtml-tap-highlight-color: transparent;
+    -moz-tap-highlight-color: transparent;
+    -ms-tap-highlight-color: transparent;
+}
+
+body img{
+    -webkit-tap-highlight-color: transparent;
+    -khtml-tap-highlight-color: transparent;
+    -moz-tap-highlight-color: transparent;
+    -ms-tap-highlight-color: transparent;
+}
+
+body input{
+    -webkit-tap-highlight-color: transparent;
+    -khtml-tap-highlight-color: transparent;
+    -moz-tap-highlight-color: transparent;
+    -ms-tap-highlight-color: transparent;
+}
+
+body:focus{
+    outline: none;
+}
+
+body input:focus{
+    background-color: lightyellow;
+    outline: none;
+}
+
+body button:focus{
+    outline: none;
+}

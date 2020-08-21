@@ -1,9 +1,57 @@
-<html>
-    <head>
+<!DOCTYPE html>
 
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <title>Launchstore</title>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+
+        {% block head_content %}{% endblock %}
     </head>
 
     <body>
-        <h1>Testando</h1>
+        <header class="menu-navegacao">
+            <ul>
+                <li>
+                    <h1>Launchstore</h1>
+                    <h2>Compra e Venda</h2>
+                </li>
+
+                <li>
+                    <input 
+                        type="text"
+                        placeholder="Buscar por Produto"
+                    >
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="material-icons">add</i>
+                        Novo Anúncio
+                    </a>
+
+                    <a href="#">
+                        <i class="material-icons">account_circle</i>
+                        Minha Conta
+                    </a>
+                </li>
+            </ul>
+
+            <div>
+                <span class="copyright-span">© Copyright Launchstore</span>
+            </div>
+        </header>
+
+        {% block body_main_content %}{% endblock %}
+
+        <footer>
+
+        </footer>
     </body>
 </html>

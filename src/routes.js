@@ -8,7 +8,7 @@ const routes = express.Router()
 // Configurando Rotas
 
 routes.get('/', (req, res) => {
-    res.render('layout')
+    res.render('./home/home_page')
 })
 
 
