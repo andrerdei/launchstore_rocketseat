@@ -1,4 +1,4 @@
-/* Estilos Básicos do Menu */
+/* Estilos Básicos do Header */
 
 .menu-navegacao{
     width: 100vw;
@@ -9,8 +9,6 @@
     font-size: 16px;
     line-height: 28px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     padding-top: 1em;
     padding-bottom: 1em;
 }
@@ -22,16 +20,13 @@
     }
 }
 
-.menu-navegacao > *{
-    width: 100%;
-    display: grid;
-    gap: .5em;
-}
-
 
 /* menu-navegacao ul */
 
 .menu-navegacao ul{
+    width: 100%;
+    display: grid;
+    gap: .5em;
     grid-template-columns: 1fr 2fr 1fr;
     justify-content: center;
     align-items: center;
@@ -45,10 +40,12 @@
 
 @media(max-width: 800px){
     .menu-navegacao ul{
-        width: 80%;
-        grid-template-columns: repeat(auto-fit, 100%);  
+        grid-template-columns: repeat(auto-fit, 100%);
     }
 }
+
+
+/* menu-navegacao ul li (e filhos) */
 
 .menu-navegacao ul li{
     width: 100%;
@@ -56,8 +53,7 @@
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
-    margin-top: 2em;
-    
+    margin-top: 1em;
 }
 
 .menu-navegacao ul li h1{
@@ -88,7 +84,13 @@
 
 @media(max-width: 800px){
     .menu-navegacao ul li input{
-        width: 80%;
+        width: 65%;
+    }
+}
+
+@media(max-width: 420px){
+    .menu-navegacao ul li input{
+        width: 75%;
     }
 }
 
@@ -102,21 +104,22 @@
     
 }
 
+@media(max-width: 800px){
+    .menu-navegacao ul li a{
+        margin: 3em;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+@media(max-width: 420px){
+    .menu-navegacao ul li a{
+        margin: 1em;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
 .menu-navegacao ul li a i{
     margin-right: .2em;
-}
-
-
-/* menu-navegacao .copyright-span */
-
-.menu-navegacao div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.menu-navegacao div .copyright-span{
-    width: 100%;
-    text-align: center;
-    margin-top: 2em;
 }

@@ -16,6 +16,9 @@ body{
     line-height: 28px;
     position: relative;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 body h1{

@@ -13,6 +13,7 @@
         rel="stylesheet">
 
         {% block head_content %}{% endblock %}
+        
     </head>
 
     <body>
@@ -42,16 +43,14 @@
                     </a>
                 </li>
             </ul>
-
-            <div>
-                <span class="copyright-span">© Copyright Launchstore</span>
-            </div>
         </header>
 
         {% block body_main_content %}{% endblock %}
 
-        <footer>
-
+        <footer class="rodape">
+            <div>
+                <span class="copyright-span">© Copyright Launchstore</span>
+            </div>
         </footer>
     </body>
 </html>
