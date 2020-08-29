@@ -1,0 +1,134 @@
+/* Card Section */
+
+.card{
+    max-width: 1000px;
+    background-color: white;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,.1);
+    margin: auto;
+    border-radius: 5px;
+}
+
+@media(max-width: 1000px){
+    .card{
+        background-color: none;
+        box-shadow: none;
+    }
+}
+
+
+/* Details Div */
+
+.details{ 
+    width: 100%;
+    color: grey;
+    font-size: 16px;
+    padding: 2em;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    letter-spacing: 0em;
+    font-weight: bold;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media(max-width: 1000px){
+    .details{
+        width: 90%;
+        font-size: 14px;
+    }
+}
+
+.details h3{
+    color: var(--primary-color);
+    font-size: 100%;
+    align-self: flex-start;
+}
+
+@media(max-width: 1000px){
+    .details h3{
+        font-size: 110%;
+        align-self: center;
+    }
+}
+
+
+/* Details Item Div */
+
+.details .item{
+    width: 100%;
+    margin-top: 1em;
+}
+
+.details .item select{
+    width: 100%;
+    color: grey;
+    font-size: 14px;
+    height: 2.5em;
+    padding: .5em;
+    box-sizing: border-box;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+}
+
+.details .item input{
+    width: 100%;
+    color: grey;
+    font-size: 14px;
+    height: 2.5em;
+    padding: .5em;
+    box-sizing: border-box;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+}
+
+.details .item textarea{
+    width: 100%;
+    color: grey;
+    font-size: 14px;
+    padding: .5em;
+    box-sizing: border-box;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+}
+
+.details .item .description-span{
+    display: inline-block;
+    width: 100%;
+    font-size: 80%;
+    text-align: center;
+    font-weight: normal;
+    text-transform: none;
+}
+
+
+/* Buttons */
+
+.primary-color-button{
+    width: 100%;
+    height: 2.5em;
+    color: white;
+    background-color: var(--primary-color);
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    margin-top: 2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+@media(max-width: 1000px){
+    .primary-color-button{
+        font-size: 15px;
+    }
+}
+
+@media(hover: hover){
+    .primary-color-button:hover{
+        background-color: #d7780b;
+    }
+    
+}

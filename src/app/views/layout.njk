@@ -5,7 +5,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
         <title>Launchstore</title>
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
@@ -13,34 +12,37 @@
         rel="stylesheet">
 
         {% block head_content %}{% endblock %}
-        
+
+        <script src="/js/static.js"></script>
     </head>
 
     <body>
         <header class="menu-navegacao">
             <ul>
-                <li>
+                <li class="logo">
                     <h1>Launchstore</h1>
                     <h2>Compra e Venda</h2>
                 </li>
 
-                <li>
+                <li class="filter">
                     <input 
                         type="text"
                         placeholder="Buscar por Produto"
                     >
                 </li>
 
-                <li>
-                    <a href="#">
-                        <i class="material-icons">add</i>
-                        Novo Anúncio
-                    </a>
+                <li class="links">
+                    <div>
+                        <a href="/products/create">
+                            <i class="material-icons">add</i>
+                            Novo Anúncio
+                        </a>
 
-                    <a href="#">
-                        <i class="material-icons">account_circle</i>
-                        Minha Conta
-                    </a>
+                        <a href="#">
+                            <i class="material-icons">account_circle</i>
+                            Minha Conta
+                        </a>
+                    </div>
                 </li>
             </ul>
         </header>

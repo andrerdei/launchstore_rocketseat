@@ -5,11 +5,17 @@
     <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/menu.css">
     <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="/css/home/home_page.css">
+    <link rel="stylesheet" href="/css/products/new_product.css">
 {% endblock head_content %}
 
 {% block body_main_content %}
     <main>
+        <form class="card" method="POST" action="/products/create">
+            <div class="details">
+                <h3>Cadastrar Produto</h3>
 
+                {% include "./includes/form_fields.njk" %}
+            </div>
+        </form>
     </main>
 {% endblock body_main_content %}

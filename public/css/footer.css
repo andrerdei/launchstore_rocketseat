@@ -3,22 +3,30 @@
 .rodape{
     width: 100vw;
     min-height: 5em;
-    background-color: black;
+    background-color: rgba(10,10,10,1);
     color: white;
     font-family: "Roboto", "sans serif";
     font-size: 16px;
     line-height: 28px;
-    margin-top: 1em;
+    box-shadow: 0px 0px 2px 1px black;
+    margin-top: 3em;
     box-sizing: border-box;
     display: flex;
 }
 
-@media(max-width: 1000px){
+@media(max-width: 1400px){
     .rodape{
         font-size: 12px;
         line-height: 20px;
     }
 }
+
+@media(max-width: 1000px){
+    .rodape{
+        margin-top: 1em;
+    }
+}
+
 
 .rodape div{
     width: 100%;

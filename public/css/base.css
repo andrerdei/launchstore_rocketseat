@@ -2,6 +2,7 @@
 
 :root{
     --primary-color: #fd951f;
+    --secondary-color: #1fd4fd;
 }
 
 
@@ -11,6 +12,7 @@ body{
     width: 100vw;
     height: 100vh;
     color: black;
+    background-color: #fffAFA;
     font-family: "Roboto", "sans serif";
     font-size: 16px;
     line-height: 28px;
@@ -59,19 +61,30 @@ body img{
     -ms-tap-highlight-color: transparent;
 }
 
-body input{
+body input,
+body select{
     -webkit-tap-highlight-color: transparent;
     -khtml-tap-highlight-color: transparent;
     -moz-tap-highlight-color: transparent;
     -ms-tap-highlight-color: transparent;
 }
 
+body input[type=number]::-webkit-inner-spin-button, 
+body input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
 body:focus{
     outline: none;
 }
 
-body input:focus{
-    background-color: lightyellow;
+body input:focus,
+body select:focus,
+body textarea:focus{
+    background-color: rgb(243, 243, 237);
     outline: none;
 }
 
