@@ -5,6 +5,7 @@ const express = require('express')
 const home_page = require('./app/controllers/home/home_page')
 
 const new_product = require('./app/controllers/products/new_product')
+const edit_product = require('./app/controllers/products/edit_product')
 
 const routes = express.Router()
 
@@ -19,6 +20,11 @@ routes.get('/home', home_page.index)
 
 routes.get('/products/create', new_product.index)
 routes.post('/products/create', new_product.create)
+
+routes.get('/products/edit', edit_product.redirect)
+routes.get('/products/edit/:id', edit_product.index)
+routes.put('/products/edit', edit_product.update)
+routes.delete('/products/edit', edit_product.delete)
 
 
 // Alias

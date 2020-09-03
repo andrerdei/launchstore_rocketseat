@@ -1,5 +1,6 @@
 // Declarando Variáveis Globais (require)
 
+const categoriesModel = require('../../models/categories/categories')
 const newProductModel = require('../../models/products/new_product')
 
 
@@ -12,10 +13,10 @@ module.exports = {
 
     async index(req, res) {
         try{
-            const results = await newProductModel.getAllCategories()
-            const categories = results.rows
+            const results = await categoriesModel.getAllCategories()
+            const categoryOptions = results.rows
 
-            return res.render('products/new_product', {categories: categories})
+            return res.render('products/new_product', {categoryOptions: categoryOptions})
         }
         
         catch(err){
@@ -33,7 +34,6 @@ module.exports = {
         const priceRegex = new RegExp("^([R][$][\\s])?[\\d]{1,3}([.][\\d]{3})?([,][\\d]{2})$", "g")
         const quantityRegex = new RegExp("^[\\d]{1,6}$", "g")
 
-
         // Os Testes de Regex Resultam em Um Booleano
 
         const categoryIdTest = categoryIdRegex.test(req.body.category_id)
@@ -41,8 +41,6 @@ module.exports = {
         const descriptionTest = descriptionRegex.test(req.body.description)
         const priceTest = priceRegex.test(req.body.price)
         const quantityTest = quantityRegex.test(req.body.quantity)
-
-        console.log(req.body)
 
         for(key of keys) {
             if(!categoryIdTest
@@ -65,11 +63,8 @@ module.exports = {
         bodyData.price = Number(bodyData.price/100)
         bodyData.quantity = Number(bodyData.quantity)
 
-        try{
-            const results = await newProductModel.createNewProduct(bodyData)
-
-            console.log(results)
-
+        try{ 
+            await newProductModel.createNewProduct(bodyData)
             return res.redirect('/products/create')
         }
 

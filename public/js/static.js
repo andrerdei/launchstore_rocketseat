@@ -45,3 +45,16 @@ function textToNumberMask(selectedInputClass){
 
     targetInput.value = ""
 }
+
+function toggleDeleteModalClasses() {
+    const modal = document.querySelector('#modal-delete')
+    const confirmationText = document.querySelector('.confirmation-text p')
+    const buttons = document.querySelectorAll('.buttons-div button')
+
+    modal.classList.toggle('show-modal')
+    confirmationText.classList.toggle('show-modal-confirmation-text')
+
+    buttons.forEach((button) => {
+        button.classList.toggle('show-modal-buttons')
+    })
+}

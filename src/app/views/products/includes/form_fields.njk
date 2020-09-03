@@ -15,7 +15,7 @@
             -- Selecionar Opção --
         </option>
 
-        {% for category in categories %}
+        {% for category in categoryOptions %}
 
             <option
                 value="{{category.id}}"
@@ -70,6 +70,17 @@
     </span>
 </div>
 <div class="item">
+
+    {% if product.old_price %}
+        <input 
+            type="hidden"
+            name="old_price"
+            value="{{product.old_price}}"
+
+            required
+        >
+    {% endif %}
+
     <div>Valor</div>
 
     <input
@@ -87,17 +98,6 @@
         
         required
     >
-
-    {% if product.old_price %}
-        <input 
-            type="hidden"
-            name="old_price"
-            value="{{product.old_price}}"
-
-            required
-        >
-    {% endif %}
-    
 </div>
 <div class="item">
     <div>Quantidade</div>
@@ -119,33 +119,39 @@
     >
 </div>
 
-{% if product.status %}
+{% if (product.status == 0) or (product.status == 1) %}
     <div class="item">
         <div>Disponível em estoque</div>
 
-        <input 
-            type="radio"
-            name="status"
-            value=1
-            
-            {% if product.status == 1 %}
-                checked
-            {% endif %}
+        <ul>
+            <li>
+                <input 
+                    type="radio"
+                    name="status"
+                    value=1
+                    
+                    {% if product.status == 1 %}
+                        checked
+                    {% endif %}
 
-            required
+                    required
 
-        > Sim
+                > Sim
+            </li>
+            <li>
+                 <input 
+                    type="radio"
+                    name="status"
+                    value=0
 
-        <input 
-            type="radio"
-            name="status"
-            value=0
+                    {% if product.status == 0 %}
+                        checked
+                    {% endif %}
 
-            {% if product.status == 0 %}
-                checked
-            {% endif %}
+                > Não
+            </li>
+        </ul>
 
-        > Não
     </div>
 {% endif %}
 

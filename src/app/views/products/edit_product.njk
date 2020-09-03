@@ -1,0 +1,77 @@
+{% extends "layout.njk" %}
+
+{% block head_content %}
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/menu.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/products/edit_product.css">
+{% endblock head_content %}
+
+{% block body_main_content %}
+    <main>
+        <div class="card">
+            <div class="details">
+                <form id="edit-form" method="POST" action="/products/edit?_method=PUT">   
+                    <h3>Editar Produto</h3>
+
+                    <input
+                        type="hidden"
+                        name="id"
+                        value="{{product.id}}"
+                    >
+
+                    {% include "./includes/form_fields.njk" %}
+                </form>
+
+                <form id="fake-form">
+                    <button
+                        id="fake-delete-button"
+                        class="tertiary-color-button form-button"
+                        type="button"
+                        onclick="toggleDeleteModalClasses()"
+                    >
+                    Deletar
+                    </button>
+                </form>
+
+                <section id = "modal-delete" class= "modal-delete">
+                    <form id="delete-form" method="POST" action="/products/edit?_method=DELETE">
+                        <input
+                            type="hidden"
+                            name="id"
+                            value="{{product.id}}"
+                        >
+
+                        <span class="confirmation-text">
+                            <p>
+                                Confirma que quer deletar este produto?
+                            </p>
+                        </span>
+
+                        <div class="buttons-div">
+                            <button
+                            type="submit"
+                            >
+                            Sim
+                            </button>
+
+                            <button
+                                type="button"
+                                onclick="toggleDeleteModalClasses()"
+                            >
+                            Não
+                            </button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </main>
+{% endblock body_main_content %}
+
+{% block script_content %}
+    <script>
+        monetaryBRLMask('price-input')
+    </script>
+{% endblock script_content %}
